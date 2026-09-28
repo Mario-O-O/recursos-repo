@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="523.6 5973.3 71.5 72.6" width="71.5" height="72.6"><defs><style>.cls-3 {fill: none;} .cls-39 {fill-rule: evenodd;} .cls-39 {fill: #fff;} .cls-380 {clip-path: url(#clippath-60);} .cls-595 {fill: url(#Degradado_sin_nombre_4);}</style><linearGradient id="Degradado_sin_nombre_4" data-name="Degradado sin nombre 4" x1="5545.82" y1="6743.69" x2="5546.8" y2="6743.69" gradientTransform="translate(459864.71 -371743.54) rotate(90) scale(68.11)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ea2229" />
+      <stop offset="1" stop-color="#a91e23" />
+    </linearGradient>
+    <clipPath id="clippath-60">
+      <path class="cls-3" d="M540.98,5976.29c-7.96,0-14.42,6.56-14.42,14.64v37.28c0,8.09,6.45,14.64,14.42,14.64h36.7c7.96,0,14.42-6.56,14.42-14.64v-37.28c0-8.09-6.46-14.64-14.42-14.64h-36.7Z" />
+    </clipPath>
+    </defs><g><g class="cls-380"><rect class="cls-595" x="526.57" y="5976.29" width="65.53" height="66.56" /></g><path class="cls-39" d="M575.12,6019.72h-10.71v2.82l2.25,2.26v.56h-14.66v-.56l2.25-2.26v-2.82h-10.71c-.94,0-1.69-.76-1.69-1.69v-22.55c0-.94.76-1.69,1.69-1.69h31.57c.93,0,1.69.76,1.69,1.69v22.55c0,.93-.76,1.69-1.69,1.69M574.55,5996.05h-30.44v19.17h30.44v-19.17Z" /></g></svg>

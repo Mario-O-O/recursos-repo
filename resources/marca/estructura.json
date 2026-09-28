@@ -1,0 +1,425 @@
+{
+ "boards": [
+  {
+   "label": "Logos Davivienda y productos",
+   "sections": [
+    {
+     "dir": "logo-davivienda",
+     "label": "Logo Davivienda",
+     "files": [
+      "davivienda-disposicion-1-color",
+      "davivienda-disposicion-2-color",
+      "davivienda-disposicion-3-color",
+      "davivienda-disposicion-4-color",
+      "davivienda-disposicion-1-fondo-rojo",
+      "davivienda-disposicion-2-fondo-rojo",
+      "davivienda-disposicion-3-fondo-rojo",
+      "davivienda-disposicion-4-fondo-rojo",
+      "davivienda-disposicion-1-gris",
+      "davivienda-disposicion-2-gris",
+      "davivienda-disposicion-3-gris",
+      "davivienda-disposicion-4-gris",
+      "davivienda-disposicion-1-fondo-negro",
+      "davivienda-disposicion-2-fondo-negro",
+      "davivienda-disposicion-3-fondo-negro",
+      "davivienda-disposicion-4-fondo-negro"
+     ]
+    },
+    {
+     "dir": "logo-leasing",
+     "label": "Logo Leasing",
+     "files": [
+      "leasing-horizontal-color",
+      "leasing-horizontal-negro",
+      "leasing-vertical-blanco",
+      "leasing-vertical-color"
+     ]
+    },
+    {
+     "dir": "logo-experiencias",
+     "label": "Logo Experiencias",
+     "files": [
+      "experiencias-contorno-rojo-gris",
+      "experiencias-rojo",
+      "experiencias-gris",
+      "experiencias-negro",
+      "experiencias-fondo-negro"
+     ]
+    },
+    {
+     "dir": "logo-davivienda-golf-tour",
+     "label": "Logo Davivienda Golf Tour",
+     "files": [
+      "golf-tour-horizontal",
+      "golf-tour-horizontal-2017",
+      "golf-tour-vertical",
+      "golf-tour-vertical-2017"
+     ]
+    },
+    {
+     "dir": "logo-educacion-financiera",
+     "label": "Logo Educación financiera",
+     "files": [
+      "mis-finanzas-en-casa-horizontal",
+      "mis-finanzas-invertir-horizontal",
+      "mis-finanzas-mi-negocio-horizontal",
+      "mis-finanzas-en-jeans-horizontal",
+      "monetarium-horizontal",
+      "haga-cuentas-horizontal",
+      "mis-finanzas-en-casa-vertical",
+      "mis-finanzas-invertir-vertical",
+      "mis-finanzas-mi-negocio-vertical",
+      "mis-finanzas-en-jeans-vertical",
+      "monetarium-vertical",
+      "haga-cuentas-vertical",
+      "mis-finanzas-en-casa-horizontal-blanco",
+      "mis-finanzas-invertir-horizontal-blanco",
+      "mis-finanzas-mi-negocio-horizontal-blanco",
+      "mis-finanzas-en-jeans-horizontal-blanco",
+      "monetarium-horizontal-blanco",
+      "haga-cuentas-horizontal-blanco",
+      "mis-finanzas-en-casa-vertical-blanco",
+      "mis-finanzas-invertir-vertical-blanco",
+      "mis-finanzas-mi-negocio-vertical-blanco",
+      "mis-finanzas-en-jeans-vertical-blanco",
+      "monetarium-vertical-blanco",
+      "haga-cuentas-vertical-blanco",
+      "mis-finanzas-para-mi-negocio",
+      "profe-de-finanzas",
+      "profe-de-finanzas-icono"
+     ]
+    },
+    {
+     "dir": "logo-check",
+     "label": "Logo Check",
+     "files": [
+      "check-fondo-blanco",
+      "check-fondo-gris",
+      "check-fondo-rojo"
+     ]
+    },
+    {
+     "dir": "cierre-app-davivienda",
+     "label": "Cierre App Davivienda",
+     "files": [
+      "cierre-app-horizontal",
+      "cierre-app-vertical",
+      "cierre-app-negocios-horizontal",
+      "cierre-app-negocios-vertical",
+      "cierre-app-pensionados-horizontal",
+      "cierre-app-pensionados-vertical",
+      "cierre-app-empleados-horizontal",
+      "cierre-app-empleados-vertical"
+     ]
+    },
+    {
+     "dir": "cierre-app-davivienda-empresas",
+     "label": "Cierre App Davivienda Empresas",
+     "files": [
+      "cierre-app-empresas-horizontal",
+      "cierre-app-empresas-vertical",
+      "cierre-app-empresas-negocios-horizontal",
+      "cierre-app-empresas-negocios-vertical"
+     ]
+    },
+    {
+     "dir": "iconos-institucionales",
+     "label": "Iconos institucionales",
+     "files": [
+      "icono-app-rojo",
+      "icono-app-negro",
+      "icono-daviplata",
+      "icono-escritorio-rojo",
+      "icono-ok",
+      "icono-tienda",
+      "icono-empresas",
+      "icono-agro",
+      "icono-vehiculo",
+      "icono-vivienda",
+      "icono-davipuntos",
+      "icono-escritorio-gris"
+     ]
+    },
+    {
+     "dir": "razon-social-y-davibank",
+     "label": "Razón social y Davibank",
+     "files": [
+      "razon-social-banco-davivienda",
+      "razon-social-banco-davibank",
+      "razon-social-davivienda-group",
+      "davibank-vertical",
+      "davibank-horizontal"
+     ]
+    },
+    {
+     "dir": "logo-corredores",
+     "label": "Logo Corredores",
+     "files": [
+      "corredores-horizontal-color",
+      "corredores-horizontal-negro",
+      "corredores-vertical-blanco",
+      "corredores-vertical-color"
+     ]
+    },
+    {
+     "dir": "logo-fiduciaria",
+     "label": "Logo Fiduciaria",
+     "files": [
+      "fiduciaria-horizontal-color",
+      "fiduciaria-vertical-color",
+      "fiduciaria-vertical-color-grande",
+      "fiduciaria-horizontal-fondo-rojo",
+      "fiduciaria-vertical-fondo-rojo",
+      "fiduciaria-vertical-fondo-rojo-grande",
+      "fiduciaria-horizontal-blanco",
+      "fiduciaria-vertical-blanco",
+      "fiduciaria-vertical-blanco-grande",
+      "fiduciaria-horizontal-negro",
+      "fiduciaria-vertical-negro",
+      "fiduciaria-vertical-negro-grande"
+     ]
+    },
+    {
+     "dir": "logo-daviplata",
+     "label": "Logo Daviplata",
+     "files": [
+      "daviplata-color",
+      "daviplata-rojo",
+      "daviplata-negro",
+      "daviplata-blanco-fondo-rojo",
+      "daviplata-blanco-fondo-negro"
+     ]
+    },
+    {
+     "dir": "logo-privilegios",
+     "label": "Logo Privilegios",
+     "files": [
+      "privilegios-horizontal-negro",
+      "privilegios-horizontal-blanco",
+      "privilegios-vertical-negro",
+      "privilegios-vertical-blanco"
+     ]
+    },
+    {
+     "dir": "logo-restaurant-tour",
+     "label": "Logo Restaurant Tour",
+     "files": [
+      "restaurant-tour-negro",
+      "restaurant-tour-blanco"
+     ]
+    },
+    {
+     "dir": "logo-mi-pyme-online-davivienda",
+     "label": "Logo Mi Pyme Online Davivienda",
+     "files": [
+      "mi-pyme-online"
+     ]
+    },
+    {
+     "dir": "live-davivienda",
+     "label": "Live Davivienda",
+     "files": [
+      "live-davivienda-negro",
+      "live-davivienda-blanco"
+     ]
+    },
+    {
+     "dir": "mas-tiempo",
+     "label": "Más tiempo",
+     "files": [
+      "mas-tiempo"
+     ]
+    },
+    {
+     "dir": "serie-oro",
+     "label": "Serie Oro",
+     "files": [
+      "serie-oro-rojo",
+      "serie-oro-gris",
+      "serie-oro-rojo-grande",
+      "serie-oro-gris-grande"
+     ]
+    },
+    {
+     "dir": "somos-uno",
+     "label": "Somos uno",
+     "files": [
+      "somos-uno-negro",
+      "somos-uno-color"
+     ]
+    },
+    {
+     "dir": "logo-vision-davivienda",
+     "label": "Logo Visión Davivienda",
+     "files": [
+      "vision-horizontal-rojo-gris",
+      "vision-vertical-rojo-gris",
+      "vision-horizontal-negro",
+      "vision-vertical-negro",
+      "vision-horizontal-rojo",
+      "vision-vertical-rojo",
+      "vision-horizontal-gris",
+      "vision-vertical-gris",
+      "vision-horizontal-fondo-negro",
+      "vision-vertical-fondo-negro"
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Aliados y tiendas",
+   "sections": [
+    {
+     "dir": "logo-diners",
+     "label": "Logo Diners",
+     "files": [
+      "diners-club-horizontal",
+      "diners-club-horizontal-blanco",
+      "diners-club-vertical",
+      "diners-club-vertical-blanco",
+      "diners-cuotas-sin-interes",
+      "diners-discover-tarjetas"
+     ]
+    },
+    {
+     "dir": "logo-py-plus",
+     "label": "Logo Py+",
+     "files": [
+      "py-plus-color",
+      "py-plus-blanco"
+     ]
+    },
+    {
+     "dir": "logo-siigo",
+     "label": "Logo Siigo",
+     "files": [
+      "siigo"
+     ]
+    },
+    {
+     "dir": "servicios-sb",
+     "label": "Servicios SB",
+     "files": [
+      "ciencuadras",
+      "doctor-aki",
+      "jelpit",
+      "servicios-bolivar",
+      "grupo-bolivar",
+      "bre-b",
+      "seguros-bolivar"
+     ]
+    },
+    {
+     "dir": "logo-fogafin",
+     "label": "Logo Fogafín",
+     "files": [
+      "fogafin-producto-protegido",
+      "fogafin-color",
+      "fogafin-negro",
+      "fogafin-blanco"
+     ]
+    },
+    {
+     "dir": "tiendas-digitales",
+     "label": "Tiendas digitales",
+     "files": [
+      "app-store",
+      "google-play",
+      "app-gallery"
+     ]
+    },
+    {
+     "dir": "cartagena-festival-de-musica",
+     "label": "Cartagena Festival de Música",
+     "files": [
+      "cartagena-festival-musica-vertical",
+      "cartagena-festival-musica-horizontal"
+     ]
+    },
+    {
+     "dir": "coljuegos",
+     "label": "Coljuegos",
+     "files": [
+      "coljuegos-autoriza"
+     ]
+    },
+    {
+     "dir": "su-plus",
+     "label": "Su+",
+     "files": [
+      "su-plus-color",
+      "su-plus-blanco"
+     ]
+    },
+    {
+     "dir": "social-skin",
+     "label": "Social Skin",
+     "files": [
+      "social-skin-color",
+      "social-skin-fondo-oscuro",
+      "social-skin-fondo-naranja"
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Elementos gráficos",
+   "sections": [
+    {
+     "dir": "variantes-leitmotiv",
+     "label": "Variantes Leitmotiv",
+     "files": [
+      "leitmotiv-arco-fino",
+      "leitmotiv-arco-medio",
+      "leitmotiv-arco-grueso",
+      "leitmotiv-cupula",
+      "leitmotiv-cupula-redondeada"
+     ]
+    },
+    {
+     "dir": "casa-silueta",
+     "label": "Casa silueta",
+     "files": [
+      "check-fino",
+      "chevron-izquierda-fino",
+      "destello",
+      "circulo-abierto",
+      "check",
+      "circulo-relleno",
+      "cara-sorpresa",
+      "cara-estrellas",
+      "esquina-1",
+      "flecha-izquierda",
+      "chevron-izquierda",
+      "linea-horizontal",
+      "casa-silueta",
+      "silueta-curva",
+      "circulo-chevron",
+      "circulo-contorno",
+      "flecha-diagonal-fina",
+      "media-luna",
+      "flecha-arriba-izquierda",
+      "linea-curva",
+      "globo-dialogo",
+      "signo-interrogacion",
+      "flecha-abajo",
+      "esquina-2",
+      "globo-relleno",
+      "flecha-derecha",
+      "check-contorno",
+      "flecha-diagonal"
+     ]
+    },
+    {
+     "dir": "separadores",
+     "label": "Separadores",
+     "files": [
+      "separador-corazon",
+      "separador-circulo",
+      "separador-degradado"
+     ]
+    }
+   ]
+  }
+ ]
+}

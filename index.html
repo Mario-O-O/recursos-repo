@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Iconos y manual de comunicación digital</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="brand">
+        <svg class="brand__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"></path></svg>
+        <div>
+          <h1 id="site-title">Iconos</h1>
+          <p id="site-subtitle">Iconos de línea, Davivienda y 3D, personalizables y listos para descargar</p>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Secciones">
+        <a href="#/recursos" class="main-nav__link" data-view="recursos">Iconos</a>
+        <a href="#/marca" class="main-nav__link" data-view="marca">Logos y marca</a>
+        <a href="#/manual" class="main-nav__link" data-view="manual">Manual de comunicación</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="view-recursos">
+    <section class="toolbar" aria-label="Filtros y personalización">
+      <div class="toolbar__row">
+        <div class="field field--search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="field__icon"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+          <input id="search" type="search" placeholder="Buscar icono (ej. campana, inicio, estrella)..." autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label for="type-filter">Tipo</label>
+          <select id="type-filter">
+            <option value="all">Todos</option>
+            <option value="icon">Iconos (línea)</option>
+            <option value="icon-davivienda">Iconos Davivienda</option>
+            <option value="icon-3d">Iconos 3D (PNG)</option>
+            <option value="logo">Logos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="toolbar__row toolbar__row--customize">
+        <div class="field field--inline">
+          <label for="color">Color</label>
+          <span id="color-swatch" class="color-swatch" style="background:#0f172a"></span>
+          <input id="color" type="text" value="#0f172a" maxlength="7" spellcheck="false" autocomplete="off" placeholder="#000000" />
+        </div>
+
+        <div class="field field--inline">
+          <label for="stroke">Grosor de línea <span id="stroke-value">1.5</span>px</label>
+          <input id="stroke" type="range" min="0.5" max="4" step="0.5" value="1.5" />
+        </div>
+
+        <div class="field field--inline">
+          <span class="field__label">Estilo</span>
+          <div class="segmented" id="fill-mode" role="group" aria-label="Estilo de relleno">
+            <button type="button" class="segmented__btn is-active" data-mode="outline">Contorno</button>
+            <button type="button" class="segmented__btn" data-mode="fill">Relleno</button>
+          </div>
+        </div>
+
+        <div class="field field--inline">
+          <label for="size">Tamaño de descarga</label>
+          <select id="size">
+            <option value="16">16 px</option>
+            <option value="24" selected>24 px</option>
+            <option value="32">32 px</option>
+            <option value="48">48 px</option>
+            <option value="64">64 px</option>
+            <option value="128">128 px</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <p class="stats stats--bar" id="stats"></p>
+
+    <section class="grid" id="grid" aria-live="polite"></section>
+
+    <p class="empty-state" id="empty-state" hidden>No se encontraron iconos con esos filtros.</p>
+  </main>
+
+  <main id="view-marca" hidden>
+    <section class="toolbar toolbar--marca" aria-label="Filtros de logos y marca">
+      <div class="toolbar__row">
+        <div class="field field--search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="field__icon"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+          <input id="marca-search" type="search" placeholder="Buscar logo o elemento (ej. fiduciaria, cierre, check)..." autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label for="marca-filter">Sección</label>
+          <select id="marca-filter"></select>
+        </div>
+
+        <div class="field">
+          <label for="marca-size">Tamaño del PNG</label>
+          <select id="marca-size">
+            <option value="256">256 px</option>
+            <option value="512" selected>512 px</option>
+            <option value="1024">1024 px</option>
+            <option value="2048">2048 px</option>
+          </select>
+        </div>
+      </div>
+      <p class="toolbar__note">Los SVG se descargan en su tamaño original. El tamaño del PNG es el de su lado mayor. Organizado como el ToolKit general de marca.</p>
+    </section>
+
+    <p class="stats stats--bar" id="marca-stats"></p>
+
+    <section class="grid" id="marca-grid" aria-live="polite"></section>
+
+    <p class="empty-state" id="marca-empty" hidden>No se encontraron logos con esos filtros.</p>
+  </main>
+
+  <main id="view-manual" class="manual" hidden>
+    <aside class="manual__nav" id="manual-nav" aria-label="Índice del manual"></aside>
+    <section class="manual__content" id="manual-content" tabindex="-1"></section>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox__close" aria-label="Cerrar">×</button>
+    <img class="lightbox__img" id="lightbox-img" alt="" />
+  </div>
+
+  <footer class="site-footer">
+    <p>
+      Proyecto local, sin dependencias externas. Añade tus propios SVG en <code>/icons</code>,
+      logos en <code>/resources/logos</code> o iconos 3D (PNG) en <code>/resources/png-3d</code>,
+      y ejecuta <code>node scripts/generate-manifest.js</code> para actualizar el catálogo.
+    </p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/resources.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/manual-data.js"></script>
+  <script src="js/manual-images.js"></script>
+  <script src="js/manual.js"></script>
+</body>
+</html>
