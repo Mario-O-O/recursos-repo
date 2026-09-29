@@ -27,7 +27,7 @@ const ACCENTS = {
   arroba: "arroba", atras: "atrás", audifonos: "audífonos", aprobacion: "aprobación", avion: "avión",
   bateria: "batería", brujula: "brújula", buzon: "buzón", cafe: "café", camara: "cámara", camion: "camión",
   cedula: "cédula", circulo: "círculo", codigo: "código", configuracion: "configuración",
-  corazon: "corazón", cuadricula: "cuadrícula", diseno: "diseño", fusion: "fusión", grafica: "gráfica",
+  corazon: "corazón", cuadricula: "cuadrícula", diseno: "diseño", fusion: "fusión", grafica: "gráfica", estadistica: "estadística",
   hexagono: "hexágono", identificacion: "identificación", informacion: "información",
   maletin: "maletín", mas: "más", menu: "menú", microfono: "micrófono", musica: "música",
   navegacion: "navegación", octagono: "octágono", pelicula: "película", proteccion: "protección",
