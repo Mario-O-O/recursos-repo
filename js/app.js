@@ -7,7 +7,6 @@
   const CATEGORIES = window.RESOURCE_CATEGORIES || [
     { type: "icon", label: "Iconos (línea)", hint: "Añade tus SVG en /icons y corre el generador." },
     { type: "icon-3d", label: "Iconos 3D (PNG)", hint: "Añade tus PNG en /resources/png-3d y corre el generador." },
-    { type: "logo", label: "Logos", hint: "Añade SVG o PNG en /resources/logos y corre el generador." },
   ];
 
   const state = {

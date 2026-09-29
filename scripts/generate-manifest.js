@@ -209,7 +209,6 @@ const categories = [
     hint: `Añade SVG en /resources/marca/${c.dir}.`,
   })),
   { type: "icon-3d", label: "Iconos 3D (PNG)", group: "Otros recursos", hint: "Añade tus PNG en /resources/png-3d y corre el generador." },
-  { type: "logo", label: "Logos", group: "Otros recursos", hint: "Añade SVG o PNG en /resources/logos y corre el generador." },
 ];
 
 const content = `${banner}window.RESOURCE_CATEGORIES = ${JSON.stringify(categories, null, 2)};\nwindow.RESOURCES = ${JSON.stringify(resources)};\n`;
