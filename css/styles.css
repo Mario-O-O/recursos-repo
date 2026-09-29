@@ -438,31 +438,157 @@ body {
 /* ───────────── Navegación principal ───────────── */
 .main-nav {
   display: flex;
+  flex-direction: column;
   gap: 4px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 4px;
+  margin: 0;
 }
 
 .main-nav__link {
-  padding: 7px 14px;
-  border-radius: 7px;
-  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
   white-space: nowrap;
+  overflow: hidden;
+}
+
+.main-nav__link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .main-nav__link:hover {
   color: var(--text);
+  background: var(--bg);
 }
 
 .main-nav__link.is-active {
-  background: var(--surface);
+  background: var(--accent-soft);
   color: var(--text);
-  box-shadow: var(--shadow);
+}
+
+/* ───────────── Sidebar fija ───────────── */
+:root {
+  --sidebar-w: 240px;
+  --sidebar-w-collapsed: 68px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 40;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: width 0.2s ease;
+}
+
+.sidebar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 4px;
+  min-height: 36px;
+}
+
+.sidebar__mark {
+  width: 28px;
+  height: 28px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.sidebar__toggle {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.sidebar__toggle:hover {
+  color: var(--text);
+  background: var(--bg);
+}
+
+.sidebar__toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.app-content {
+  margin-left: var(--sidebar-w);
+  transition: margin-left 0.2s ease;
+  min-width: 0;
+}
+
+body.sidebar-collapsed .sidebar {
+  width: var(--sidebar-w-collapsed);
+}
+
+body.sidebar-collapsed .app-content {
+  margin-left: var(--sidebar-w-collapsed);
+}
+
+body.sidebar-collapsed .sidebar__top {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+body.sidebar-collapsed .sidebar__mark {
+  display: none;
+}
+
+body.sidebar-collapsed .main-nav__link {
+  justify-content: center;
+  padding: 10px 0;
+}
+
+body.sidebar-collapsed .main-nav__link span {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: var(--sidebar-w-collapsed);
+  }
+  .app-content {
+    margin-left: var(--sidebar-w-collapsed);
+  }
+  .sidebar__mark,
+  .main-nav__link span {
+    display: none;
+  }
+  .main-nav__link {
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .sidebar__top {
+    justify-content: center;
+  }
+  .sidebar__toggle {
+    display: none;
+  }
 }
 
 body.no-scroll {
@@ -488,8 +614,10 @@ body.no-scroll {
 
 .manual__nav {
   position: sticky;
-  top: 96px;
-  max-height: calc(100vh - 116px);
+  top: 116px;
+  z-index: 15;
+  align-self: start;
+  max-height: calc(100vh - 140px);
   overflow-y: auto;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1322,12 +1450,14 @@ body.no-scroll {
 .hero {
   padding: 28px 30px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #ed1c27, #c90c14);
-  color: #fff;
+  background: #e5e7eb80;
+  border: 1px solid var(--border);
+  color: var(--text);
 }
 
 .hero__eyebrow {
   margin: 0;
+  color: var(--text-muted);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1345,7 +1475,7 @@ body.no-scroll {
   margin: 0;
   max-width: 62ch;
   line-height: 1.55;
-  opacity: 0.95;
+  color: var(--text-muted);
 }
 
 .hero .hero__stats {
@@ -1357,6 +1487,7 @@ body.no-scroll {
 }
 
 .hero__stats b {
+  color: var(--text);
   font-size: 1.4rem;
   margin-right: 4px;
 }
@@ -1419,7 +1550,9 @@ body.no-scroll {
   }
 
   .manual__nav {
-    position: static;
+    position: sticky;
+    top: 84px;
+    z-index: 15;
     max-height: none;
     overflow: hidden;
     min-width: 0;
@@ -1699,4 +1832,46 @@ body.no-scroll {
 
 #view-marca[hidden] {
   display: none;
+}
+
+/* Scrollbar discreta del índice del manual */
+.manual__nav::-webkit-scrollbar {
+  width: 2px;
+}
+
+.manual__nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.manual__nav::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.manual__nav::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Índice del manual: fijo en pantalla ancha (no se mueve al llegar al final del scroll) */
+.app-content {
+  --sb: var(--sidebar-w);
+}
+
+body.sidebar-collapsed .app-content {
+  --sb: var(--sidebar-w-collapsed);
+}
+
+@media (min-width: 901px) {
+  .manual__nav {
+    position: fixed;
+    top: var(--manual-top, 116px);
+    max-height: calc(100vh - var(--manual-top, 116px) - 24px);
+    left: calc(var(--sb) + max(0px, (100vw - var(--sb) - 1200px) / 2) + 24px);
+    width: 260px;
+    transition: left 0.2s ease;
+  }
+
+  .manual__content {
+    grid-column: 2;
+  }
 }

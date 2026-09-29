@@ -383,9 +383,8 @@
       "check-fino",
       "chevron-izquierda-fino",
       "destello",
-      "circulo-abierto",
-      "check",
-      "circulo-relleno",
+      "check-circulo-abierto",
+      "check-circulo-relleno",
       "cara-sorpresa",
       "cara-estrellas",
       "esquina-1",
@@ -406,7 +405,6 @@
       "esquina-2",
       "globo-relleno",
       "flecha-derecha",
-      "check-contorno",
       "flecha-diagonal"
      ]
     },

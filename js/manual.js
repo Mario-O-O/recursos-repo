@@ -458,6 +458,17 @@
 
   // ───────────── router ─────────────
   let lastKey = "";
+  // El índice (fixed) arranca a la misma altura que el primer bloque del contenido (hero)
+  function alignManualNav() {
+    if (els.manual.hidden) return;
+    const first = els.content && els.content.firstElementChild;
+    const target = first || els.content;
+    if (!target) return;
+    const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY);
+    document.documentElement.style.setProperty("--manual-top", Math.round(top) + "px");
+  }
+  window.addEventListener("resize", alignManualNav);
+
   function route() {
     const r = parseHash();
     const isManual = r.view === "manual";
@@ -487,6 +498,7 @@
     else renderHome();
 
     if (changed) window.scrollTo({ top: 0 });
+    alignManualNav();
   }
 
   window.addEventListener("hashchange", route);
