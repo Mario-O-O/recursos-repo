@@ -127,7 +127,61 @@
     }
 
     svgEl.innerHTML = resource.svg || "";
+    if (!resource.filled && resource.customizable && state.fillMode === "fill") {
+      keepOpenStrokesAsLines(svgEl);
+      contrastInnerStrokes(svgEl, color);
+    }
     return svgEl;
+  }
+
+  // En modo relleno, los trazos abiertos (sin cerrar) se mantienen como línea.
+  function keepOpenStrokesAsLines(svgEl) {
+    svgEl.querySelectorAll("line,polyline,path").forEach((el) => {
+      let open = true;
+      if (el.tagName === "path") {
+        open = !/z/i.test(el.getAttribute("d") || "");
+      } else if (el.tagName === "polyline") {
+        const pts = (el.getAttribute("points") || "").trim().split(/[\s,]+/).map(Number);
+        const n = pts.length;
+        open = n < 4 || pts[0] !== pts[n - 2] || pts[1] !== pts[n - 1];
+      }
+      if (open) el.setAttribute("fill", "none");
+    });
+  }
+
+  // En modo relleno, las líneas que quedan dentro de una forma rellena
+  // (manecillas, ojos, etc.) se pintarían del mismo color y desaparecen:
+  // se les asigna un color contrastante.
+  function contrastInnerStrokes(svgEl, color) {
+    const m = /^#?([0-9a-f]{6})$/i.exec(String(color).trim());
+    let inner = "#ffffff";
+    if (m) {
+      const n = parseInt(m[1], 16);
+      const lum = (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255;
+      inner = lum > 0.6 ? "#111111" : "#ffffff";
+    }
+    const holder = document.createElement("div");
+    holder.style.cssText = "position:absolute;left:-9999px;top:-9999px;visibility:hidden";
+    holder.appendChild(svgEl);
+    document.body.appendChild(holder);
+    try {
+      const shapes = [...svgEl.querySelectorAll("circle,rect,ellipse,polygon,path")].filter(
+        (el) => el.tagName !== "path" || /z/i.test(el.getAttribute("d") || "")
+      );
+      svgEl.querySelectorAll("line,polyline,path").forEach((el) => {
+        if (shapes.includes(el)) return;
+        const b = el.getBBox();
+        const pt = svgEl.createSVGPoint();
+        pt.x = b.x + b.width / 2;
+        pt.y = b.y + b.height / 2;
+        if (shapes.some((sh) => sh.isPointInFill(pt))) el.setAttribute("stroke", inner);
+      });
+    } catch (e) {
+      /* sin medición disponible: se deja el trazo por defecto */
+    } finally {
+      holder.removeChild(svgEl);
+      holder.remove();
+    }
   }
 
   function serializeForDownload(resource, size) {
